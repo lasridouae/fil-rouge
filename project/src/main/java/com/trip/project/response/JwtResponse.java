@@ -1,4 +1,4 @@
-package com.trip.project.response;
+ package com.trip.project.response;
 
 import java.util.List;
 
