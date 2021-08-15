@@ -32,7 +32,7 @@ public class UserController {
 	private UserService userService;
 
 	@GetMapping
-	@PreAuthorize("hasRole('ADMIN')")
+//	@PreAuthorize("hasRole('ADMIN')")
 	public List<UserResponse> allUsers(@RequestParam(value = "page", defaultValue = "1") int page, @RequestParam(value = "limit", defaultValue = "5") int limit) {
 		List<UserResponse> userResponses = new ArrayList<>();
 		List<UserDto> users = userService.getUsers(page, limit);

@@ -36,6 +36,7 @@ import com.projet.trips.services.UserService;
 
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("/auth")
 public class AuthController {
 	@Autowired
