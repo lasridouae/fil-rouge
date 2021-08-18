@@ -4,6 +4,8 @@ import java.util.Date;
 
 public class UserResponse {
     private String userId;
+    private String firstName;
+   	private String lastName;
     private String username;
     private String email;
     private String telephone;
@@ -14,7 +16,9 @@ public class UserResponse {
 	private String sexe;
 	private Date dateNaissance;
 
-    public String getUserId() {
+	
+
+	public String getUserId() {
         return userId;
     }
 
@@ -30,7 +34,23 @@ public class UserResponse {
         this.username = username;
     }
 
-    public String getEmail() {
+    
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public String getEmail() {
         return email;
     }
 

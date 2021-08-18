@@ -10,8 +10,10 @@ import javax.validation.constraints.Size;
 public class SignupRequest {
 
 	@NotBlank
-	@Size(min = 3, max = 29)
-	private String fullName;
+	private String firstName;
+
+	@NotBlank
+	private String lastName;
 
 	@NotBlank
 	@Size(min = 3, max = 20)
@@ -28,21 +30,11 @@ public class SignupRequest {
 	@Size(min = 6, max = 40)
 	private String password;
 
-	@NotBlank
-	private String telephone;
-
-	@NotBlank
-	private String ville;
-
-	@NotBlank
-	@Size(max = 8)
-	private String cin;
 
 	@NotBlank
 	private String photo;
 
-	@NotBlank
-    private  String bio;
+	
 	
 	@NotBlank
 	@Size(max = 12)
@@ -53,33 +45,50 @@ public class SignupRequest {
 
 
 
-	public SignupRequest(@NotBlank @Size(min = 3, max = 29) String fullName,
+
+
+
+	public SignupRequest(@NotBlank String firstName, @NotBlank String lastName,
 			@NotBlank @Size(min = 3, max = 20) String username, @NotBlank @Size(max = 50) @Email String email,
-			Set<String> role, @NotBlank @Size(min = 6, max = 40) String password, @NotBlank String telephone,
-			@NotBlank String ville, @NotBlank @Size(max = 8) String cin, @NotBlank String photo, @NotBlank String bio,
+			Set<String> role, @NotBlank @Size(min = 6, max = 40) String password, @NotBlank String photo,
 			@NotBlank @Size(max = 12) String sexe, @NotBlank Date dateNaissance) {
 		super();
-		this.fullName = fullName;
+		this.firstName = firstName;
+		this.lastName = lastName;
 		this.username = username;
 		this.email = email;
 		this.role = role;
 		this.password = password;
-		this.telephone = telephone;
-		this.ville = ville;
-		this.cin = cin;
 		this.photo = photo;
-		this.bio = bio;
 		this.sexe = sexe;
 		this.dateNaissance = dateNaissance;
 	}
 
-	public String getFullName() {
-		return fullName;
+
+
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setFullName(String fullName) {
-		this.fullName = fullName;
+
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
+
+
+
+	public String getLastName() {
+		return lastName;
+	}
+
+
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+
 
 	public String getUsername() {
 		return username;
@@ -113,34 +122,6 @@ public class SignupRequest {
 		this.role = role;
 	}
 
-	public String getTelephone() {
-		return telephone;
-	}
-
-	public void setTelephone(String telephone) {
-		this.telephone = telephone;
-	}
-
-	public String getVille() {
-		return ville;
-	}
-
-	public void setVille(String ville) {
-		this.ville = ville;
-	}
-
-	public String getCin() {
-		return cin;
-	}
-
-	public void setCin(String cin) {
-		this.cin = cin;
-	}
-
-	public String getPhoto() {
-		return photo;
-	}
-
 	public void setPhoto(String photo) {
 		this.photo = photo;
 	}
@@ -163,13 +144,7 @@ public class SignupRequest {
 		this.dateNaissance = dateNaissance;
 	}
 
-	public String getBio() {
-		return bio;
-	}
 
-	public void setBio(String bio) {
-		this.bio = bio;
-	}
 	
 	
 

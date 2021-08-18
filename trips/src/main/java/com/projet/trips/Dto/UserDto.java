@@ -4,103 +4,111 @@ import java.util.Date;
 import java.util.Set;
 
 public class UserDto {
-    private Long id;
-    private String userId;
-    private String fullName;
-    private String username;
-    private String email;
-    private String password;
-    private Set<String> role;
-    private String encryptedPassword;
-    private Boolean emailVerificationStatus = false;
-    private String telephone;
+	private Long idUser;
+	private String userId;
+	private String firstName;
+	private String lastName;
+	private String username;
+	private String email;
+	private String password;
+	private Set<String> role;
+	private String encryptedPassword;
+	private Boolean emailVerificationStatus = false;
+	private String telephone;
 	private String ville;
 	private String cin;
-    private  String bio;
+	private String bio;
 	private String photo;
 	private String sexe;
 	private Date dateNaissance;
 
-    public String getFullName() {
-        return fullName;
-    }
+	public String getTelephone() {
+		return telephone;
+	}
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
+	public void setTelephone(String telephone) {
+		this.telephone = telephone;
+	}
 
-    public String getTelephone() {
-        return telephone;
-    }
+	public Long getIdUser() {
+		return idUser;
+	}
 
-    public void setTelephone(String telephone) {
-        this.telephone = telephone;
-    }
+	public void setId(Long idUser) {
+		this.idUser = idUser;
+	}
 
-    public Long getId() {
-        return id;
-    }
+	public String getUserId() {
+		return userId;
+	}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
 
-    public String getUserId() {
-        return userId;
-    }
+	public String getFirstName() {
+		return firstName;
+	}
 
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
 
+	public String getLastName() {
+		return lastName;
+	}
 
-    public String getEmail() {
-        return email;
-    }
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+	public String getEmail() {
+		return email;
+	}
 
-    public String getPassword() {
-        return password;
-    }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+	public String getPassword() {
+		return password;
+	}
 
-    public String getEncryptedPassword() {
-        return encryptedPassword;
-    }
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
-    public void setEncryptedPassword(String encryptedPassword) {
-        this.encryptedPassword = encryptedPassword;
-    }
+	public String getEncryptedPassword() {
+		return encryptedPassword;
+	}
 
-    public Boolean getEmailVerificationStatus() {
-        return emailVerificationStatus;
-    }
+	public void setEncryptedPassword(String encryptedPassword) {
+		this.encryptedPassword = encryptedPassword;
+	}
 
-    public void setEmailVerificationStatus(Boolean emailVerificationStatus) {
-        this.emailVerificationStatus = emailVerificationStatus;
-    }
+	public Boolean getEmailVerificationStatus() {
+		return emailVerificationStatus;
+	}
 
-    public String getUsername() {
-        return username;
-    }
+	public void setEmailVerificationStatus(Boolean emailVerificationStatus) {
+		this.emailVerificationStatus = emailVerificationStatus;
+	}
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
+	public String getUsername() {
+		return username;
+	}
 
-    public Set<String> getRole() {
-        return role;
-    }
+	public void setUsername(String username) {
+		this.username = username;
+	}
 
-    public void setRole(Set<String> role) {
-        this.role = role;
-    }
+	public Set<String> getRole() {
+		return role;
+	}
+
+	public void setRole(Set<String> role) {
+		this.role = role;
+	}
 
 	public String getVille() {
 		return ville;
@@ -126,7 +134,6 @@ public class UserDto {
 		this.photo = photo;
 	}
 
-
 	public String getSexe() {
 		return sexe;
 	}
@@ -134,7 +141,6 @@ public class UserDto {
 	public void setSexe(String sexe) {
 		this.sexe = sexe;
 	}
-
 
 	public Date getDateNaissance() {
 		return dateNaissance;
@@ -151,7 +157,5 @@ public class UserDto {
 	public void setBio(String bio) {
 		this.bio = bio;
 	}
-	
-    
-    
+
 }

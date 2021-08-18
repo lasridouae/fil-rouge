@@ -3,22 +3,24 @@ package com.projet.trips.request;
 import java.util.Date;
 
 public class UserRequest {
-    private String fullName;
-    private String username;
-    private String email;
-    private String password;
-    private String telephone;
+
+	private String firstName;
+	private String lastName;
+	private String username;
+	private String email;
+	private String password;
+	private String telephone;
 	private String ville;
 	private String cin;
 	private String photo;
 	private String sexe;
 	private Date dateNaissance;
 
- 
-    public UserRequest(String fullName, String username, String email, String password, String telephone, String ville,
-			String cin, String photo, String sexe, Date dateNaissance) {
+	public UserRequest(String firstName, String lastName, String username, String email, String password,
+			String telephone, String ville, String cin, String photo, String sexe, Date dateNaissance) {
 		super();
-		this.fullName = fullName;
+		this.firstName = firstName;
+		this.lastName = lastName;
 		this.username = username;
 		this.email = email;
 		this.password = password;
@@ -30,39 +32,45 @@ public class UserRequest {
 		this.dateNaissance = dateNaissance;
 	}
 
-	public String getFullName() {
-        return fullName;
-    }
+	public String getFirstName() {
+		return firstName;
+	}
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
 
-    public String getPassword() {
-        return password;
-    }
+	public String getLastName() {
+		return lastName;
+	}
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
 
-    public String getUsername() {
-        return username;
-    }
+	public String getPassword() {
+		return password;
+	}
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
- 
+	public String getUsername() {
+		return username;
+	}
 
-    public String getEmail() {
-        return email;
-    }
+	public void setUsername(String username) {
+		this.username = username;
+	}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
 	public String getTelephone() {
 		return telephone;
@@ -111,6 +119,5 @@ public class UserRequest {
 	public void setDateNaissance(Date dateNaissance) {
 		this.dateNaissance = dateNaissance;
 	}
-    
-    
+
 }

@@ -19,7 +19,8 @@ public class TestController {
 	}
 	
 	@GetMapping("/user")
-	@PreAuthorize("hasRole('USER')") ///secure methods in our Api's with @PreAuthorize annotation
+	@PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
+	///secure methods in our Api's with @PreAuthorize annotation
 	public String userAccess() {
 		return " User Content.";
 	}

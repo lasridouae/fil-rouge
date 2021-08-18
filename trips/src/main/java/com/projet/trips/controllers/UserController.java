@@ -40,34 +40,35 @@ public class UserController {
 			UserResponse user = new UserResponse();
 			BeanUtils.copyProperties(userDto, user);
 			userResponses.add(user);
+			System.out.println(user);
 		}
 		return userResponses;
 	}
 
-	@GetMapping(path = "{userId}")
-	public ResponseEntity<UserResponse> getUserById(@PathVariable String userId) {
-		UserDto userDto = userService.getUserByUserId(userId);
+	@GetMapping(path = "{IdUser}")
+	public ResponseEntity<UserResponse> getUserById(@PathVariable String IdUser) {
+		UserDto userDto = userService.getUserByUserId(IdUser);
 		UserResponse userResponse = new UserResponse();
 		BeanUtils.copyProperties(userDto, userResponse);
 		return new ResponseEntity<>(userResponse, HttpStatus.OK);
 	}
 
-	@PutMapping(path = "/update/{userId}")
+	@PutMapping(path = "/update/{username}")
 	@PreAuthorize("hasRole('ADMIN')")
-	public ResponseEntity<UserResponse> updateUser(@PathVariable String userId, @RequestBody UserRequest userRequest) {
+	public ResponseEntity<UserResponse> updateUser(@PathVariable String username, @RequestBody UserRequest userRequest) {
 		UserDto userDto =new UserDto();
 		BeanUtils.copyProperties(userRequest, userDto);
-		UserDto updateUser = userService.updateUser(userId, userDto);
+		UserDto updateUser = userService.updateUser(username, userDto);
 		UserResponse userResponse = new UserResponse();
 		BeanUtils.copyProperties(updateUser, userResponse);
 		return new ResponseEntity<UserResponse>(userResponse, HttpStatus.ACCEPTED);
 	}
 
 
-	@DeleteMapping(path = "/delete/{userId}")
-	@PreAuthorize("hasRole('ADMIN')")
-	public ResponseEntity<Object> deleteUser(@PathVariable String userId){
-		userService.deleteUser(userId);
+	@DeleteMapping(path = "/delete/{username}")
+//	@PreAuthorize("hasRole('ADMIN')")
+	public ResponseEntity<?> deleteUser(@PathVariable String username){
+		userService.deleteUser(username);
 		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 	}
 

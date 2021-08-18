@@ -9,6 +9,7 @@ import com.projet.trips.models.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User,Long> {
+	
     Optional<User> findByUsername(String username);
 
     Boolean existsByUsername(String username);
@@ -16,6 +17,7 @@ public interface UserRepository extends JpaRepository<User,Long> {
     Boolean existsByEmail(String email);
 
     User findUserByUserId(String userId);
+    
 
     User findByEmail(String email);
 }
